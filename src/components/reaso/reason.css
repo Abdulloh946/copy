@@ -1,0 +1,46 @@
+.reason {
+  width: 100%;
+  background: #111;
+  padding: 100px 0;
+}
+
+.reason-title {
+  color: #d8d8d8;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 60px;
+}
+
+.reason-cards {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 40px;
+}
+
+.reason-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px 25px;
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.reason-number {
+  color: #d9d9d9;
+  font-size: 72px;
+  font-weight: 500;
+  min-width: 60px;
+}
+
+.reason-text {
+  color: #111;
+  font-size: 16px;
+  line-height: 25px;
+}

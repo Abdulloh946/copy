@@ -1,0 +1,46 @@
+.meeting {
+  width: 100%;
+  background: #fff;
+  padding: 90px 0;
+}
+
+.meeting-title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 60px;
+}
+
+.meeting-cards {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px 60px;
+}
+
+.meeting-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.meeting-icon {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.meeting-text h4 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.meeting-text p {
+  color: #444;
+  font-size: 15px;
+  line-height: 24px;
+}

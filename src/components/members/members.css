@@ -1,0 +1,67 @@
+.members {
+  width: 100%;
+  background: #111;
+  padding: 100px 0;
+}
+
+.members-title {
+  color: #fff;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 60px;
+}
+
+.members-content {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.members-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.members-card {
+  width: 210px;
+  background: #202020;
+  border-radius: 18px;
+  padding: 12px;
+}
+
+.members-image {
+  width: 100%;
+  height: 160px;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+.members-name {
+  color: #fff;
+  font-size: 18px;
+  margin-top: 12px;
+}
+
+.members-job {
+  color: #9b9b9b;
+  font-size: 13px;
+  margin-top: 6px;
+  line-height: 18px;
+}
+
+.members-count {
+  width: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.members-count h1 {
+  color: #fff;
+  font-size: 96px;
+  font-weight: 600;
+}

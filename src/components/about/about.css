@@ -1,0 +1,47 @@
+.about {
+  width: 100%;
+  background: #111;
+  padding: 100px 0;
+}
+
+.about-subtitle {
+  color: #bdbdbd;
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 70px;
+}
+
+.about-content {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+}
+
+.about-text {
+  width: 430px;
+}
+
+.about-title {
+  color: #fff;
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 65px;
+  margin-bottom: 25px;
+}
+
+.about-description {
+  color: #c8c8c8;
+  font-size: 20px;
+  line-height: 35px;
+}
+
+.about-image img {
+  width: 550px;
+  border-radius: 30px;
+  display: block;
+}

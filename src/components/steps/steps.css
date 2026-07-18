@@ -1,0 +1,50 @@
+.steps {
+  width: 100%;
+  background: #111;
+  padding: 100px 0;
+}
+
+.steps-title {
+  color: #fff;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 60px;
+}
+
+.steps-box {
+  width: 90%;
+  max-width: 1050px;
+  margin: auto;
+
+  background: #fff;
+  border-radius: 20px;
+  padding: 35px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.steps-card {
+  width: 240px;
+  text-align: center;
+}
+
+.steps-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.steps-text {
+  color: #111;
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.steps-arrow {
+  width: 30px;
+  opacity: .4;
+}

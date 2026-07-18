@@ -1,0 +1,89 @@
+.application {
+  width: 100%;
+  padding: 120px 0;
+  background: #111;
+  position: relative;
+  overflow: hidden;
+}
+
+.application-content {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.application-title {
+  color: #fff;
+  text-align: center;
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 52px;
+  margin-bottom: 55px;
+}
+
+.application-form {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.application-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.application-input label {
+  color: #fff;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.application-input input {
+  width: 230px;
+  height: 42px;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  padding: 0 16px;
+  font-size: 14px;
+}
+
+.application-input input::placeholder {
+  color: #b8b8b8;
+}
+
+.application-btn {
+  width: 230px;
+  height: 42px;
+  background: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 0 8px 0 18px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.application-btn span {
+  color: #000;
+  font-size: 14px;
+}
+
+.application-btn-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.application-rectangle {
+  width: 180px;
+  position: absolute;
+  right: -25px;
+  top: 50%;
+  transform: translateY(-50%);
+}

@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.navbar {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px 80px;
+}
+
+.logo span {
+  color: white;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.logo h2 {
+  color: white;
+  font-size: 48px;
+  line-height: 45px;
+}
+
+.menu {
+  display: flex;
+  gap: 40px;
+  background: rgba(255,255,255,.05);
+  padding: 18px 35px;
+  border-radius: 40px;
+  backdrop-filter: blur(15px);
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  opacity: .8;
+}
+
+.menu a:hover {
+  opacity: 1;
+}
+
+.phone {
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.15);
+  color: white;
+  padding: 18px 35px;
+  border-radius: 40px;
+  cursor: pointer;
+  backdrop-filter: blur(15px);
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  height: calc(100vh - 120px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content h1 {
+  color: white;
+  font-size: 120px;
+  text-align: center;
+  line-height: 120px;
+  font-weight: 700;
+}
+
+.content p {
+  margin-top: 30px;
+  color: rgba(255,255,255,.7);
+  font-size: 30px;
+  text-align: center;
+}
+
+.apply {
+  margin-top: 45px;
+  background: white;
+  color: black;
+  border: none;
+  border-radius: 50px;
+  padding: 18px 35px;
+  font-size: 22px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.apply span {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.apply:hover {
+  transform: translateY(-3px);
+}
+

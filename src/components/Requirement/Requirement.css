@@ -1,0 +1,68 @@
+.requirement {
+  width: 100%;
+  background: #111;
+  padding: 100px 0;
+}
+
+.requirement-title {
+  color: #fff;
+  text-align: center;
+  font-size: 42px;
+  font-weight: 500;
+  margin-bottom: 50px;
+}
+
+.requirement-subtitle {
+  color: #cfcfcf;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 55px;
+}
+
+.requirement-cards {
+  width: 90%;
+  max-width: 1050px;
+  margin: auto;
+
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.requirement-card {
+  width: 280px;
+  min-height: 110px;
+  background: #232323;
+  border-radius: 20px;
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.requirement-icon {
+  width: 58px;
+  height: 58px;
+  background: #fff;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-shrink: 0;
+}
+
+.requirement-icon img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.requirement-text {
+  color: #fff;
+  font-size: 16px;
+  line-height: 24px;
+}
