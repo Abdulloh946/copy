@@ -1,4 +1,4 @@
-import "./meeting.css";
+import "./Meeting.css";
 
 import Online from "../../assets/audience 1.png";
 import Discussion from "../../assets/Discuss.png";

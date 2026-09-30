@@ -11,17 +11,17 @@ function Contact() {
 				<div className='contact-info'>
 					<div className='contact-item'>
 						<h4>Telegram:</h4>
-						<p>t.me/asoschilarmanager</p>
+						<a href='https://t.me/asoschilarmanager' target='_blank' rel='noreferrer'>t.me/asoschilarmanager</a>
 					</div>
 
 					<div className='contact-item'>
 						<h4>Telefon:</h4>
-						<p>+998 99 033 99 38</p>
+						<a href='tel:+998990339938'>+998 99 033 99 38</a>
 					</div>
 
 					<div className='contact-item'>
 						<h4>Email:</h4>
-						<p>abdulgodir938@gmail.com</p>
+						<a href='mailto:abdulgodir938@gmail.com'>abdulgodir938@gmail.com</a>
 					</div>
 				</div>
 			</div>

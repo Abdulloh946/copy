@@ -48,3 +48,14 @@
   width: 30px;
   opacity: .4;
 }
+
+@media (max-width: 768px) {
+  .steps-box {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .steps-arrow {
+    transform: rotate(90deg);
+  }
+}

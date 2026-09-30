@@ -3,7 +3,7 @@ import AboutImg from "../../assets/IMG_7116 1 (2).png";
 
 function About() {
   return (
-    <section className="about">
+    <section className="about" id="about">
 
       <p className="about-subtitle">Biz kimmiz?</p>
 

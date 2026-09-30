@@ -1,9 +1,9 @@
-import "./pricing.css";
+import "./Pricing.css";
 
 function PricingCard(props) {
   return (
     <div className="pricing-card">
-      <h3 className="pricing-card-title"><h1></h1>
+      <h3 className="pricing-card-title">
         {props.title}
       </h3>
 
@@ -16,7 +16,7 @@ function PricingCard(props) {
 
 function Pricing() {
   return (
-    <section className="pricing">
+    <section className="pricing" id="pricing">
 
       <h2 className="pricing-title">
         Qo'shilish narxi va a'zolik to'lovi:

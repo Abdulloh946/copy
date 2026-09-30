@@ -65,3 +65,30 @@
   font-size: 96px;
   font-weight: 600;
 }
+
+@media (max-width: 1000px) {
+  .members-cards {
+    grid-template-columns: 1fr 1fr;
+    width: 90%;
+    margin: auto;
+  }
+
+  .members-card,
+  .members-count {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .members-image {
+    height: 130px;
+  }
+
+  .members-name {
+    font-size: 15px;
+  }
+
+  .members-count h1 {
+    font-size: 60px;
+  }
+}

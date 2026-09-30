@@ -1,11 +1,51 @@
+import { useState } from "react";
 import "./application.css";
 
 import Finger from "../../assets/Group (11).png";
 import Rectangle from "../../assets/Rectangle (28).png";
 
-function Application() {
+const MANAGER = "asoschilarmanager";
+
+function Application(props) {
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("+998");
+  const [error, setError] = useState("");
+  const [sent, setSent] = useState(false);
+
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    const digits = phone.replace(/\D/g, "");
+
+    if (name.trim().length < 2) {
+      setError("Ismingizni kiriting");
+      return;
+    }
+
+    if (digits.length !== 12 || !digits.startsWith("998")) {
+      setError("Telefon raqamini to'liq kiriting: +998 XX XXX XX XX");
+      return;
+    }
+
+    setError("");
+
+    const text =
+      "Assalomu alaykum! Asoschilar Club'ga ariza.\n" +
+      "Ism: " + name.trim() + "\n" +
+      "Telefon: +" + digits;
+
+    window.open(
+      "https://t.me/" + MANAGER + "?text=" + encodeURIComponent(text),
+      "_blank"
+    );
+
+    setSent(true);
+    setName("");
+    setPhone("+998");
+  }
+
   return (
-    <section className="application">
+    <section className="application" id={props.id}>
       <div className="application-content">
         <h2 className="application-title">
           Qo'shiling va o'z biznesingizni
@@ -13,13 +53,15 @@ function Application() {
           rivojlantiring!
         </h2>
 
-        <div className="application-form">
+        <form className="application-form" onSubmit={handleSubmit}>
           <div className="application-input">
             <label>Ismingiz</label>
 
             <input
               type="text"
               placeholder="Ismingizni kiriting"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
             />
           </div>
 
@@ -27,12 +69,14 @@ function Application() {
             <label>Telefon raqamingiz</label>
 
             <input
-              type="text"
+              type="tel"
               placeholder="+998"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
             />
           </div>
 
-          <button className="application-btn">
+          <button className="application-btn" type="submit">
             <span>Ariza topshirish</span>
 
             <img
@@ -41,7 +85,15 @@ function Application() {
               className="application-btn-icon"
             />
           </button>
-        </div>
+        </form>
+
+        {error && <p className="application-error">{error}</p>}
+
+        {sent && !error && (
+          <p className="application-success">
+            Rahmat! Arizangiz Telegram orqali menejerga yuborish uchun tayyorlandi.
+          </p>
+        )}
       </div>
 
       <img

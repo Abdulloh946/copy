@@ -63,3 +63,15 @@
   color: #a7a7a7;
   font-size: 16px;
 }
+
+@media (max-width: 768px) {
+  .pricing-title {
+    font-size: 28px;
+    padding: 0 16px;
+    margin-bottom: 40px;
+  }
+
+  .pricing-price {
+    font-size: 60px;
+  }
+}
