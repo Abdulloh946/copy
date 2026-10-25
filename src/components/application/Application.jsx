@@ -4,13 +4,16 @@ import "./application.css";
 import Finger from "../../assets/Group (11).png";
 import Rectangle from "../../assets/Rectangle (28).png";
 
-const MANAGER = "umarxon7446";
+// Telegram opens the chat by phone number, so applications always reach the owner
+const TELEGRAM_PHONE = "+998950227446";
+const TELEGRAM_PHONE_LABEL = "+998 95 022 74 46";
 
 function Application(props) {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("+998");
   const [error, setError] = useState("");
   const [sentLink, setSentLink] = useState("");
+  const [sentText, setSentText] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -34,9 +37,15 @@ function Application(props) {
       "Ism: " + name.trim() + "\n" +
       "Telefon: +" + digits;
 
-    const link = "https://t.me/" + MANAGER + "?text=" + encodeURIComponent(text);
+    const link = "https://t.me/" + TELEGRAM_PHONE + "?text=" + encodeURIComponent(text);
+
+    // Prefilled text is not guaranteed for phone links, so also copy it
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(text).catch(() => {});
+    }
     window.open(link, "_blank");
 
+    setSentText(text);
     setSentLink(link);
     setName("");
     setPhone("+998");
@@ -90,22 +99,26 @@ function Application(props) {
         </form>
 
         <p className="application-hint">
-          Ariza Telegram'da{" "}
-          <b>@{MANAGER}</b> chatiga tayyor xabar bo'lib ochiladi — faqat
-          "Yuborish"ni bosasiz.
+          Ariza Telegram'da <b>{TELEGRAM_PHONE_LABEL}</b> raqamli chatga
+          ochiladi. Xabar chiqmasa, nusxalangan matnni joylashtirib yuboring.
         </p>
 
         {error && <p className="application-error">{error}</p>}
 
         {sentLink && !error && (
           <p className="application-success">
-            Telegram'da @{MANAGER} chati ochildi — xabarni yuboring, tez orada
-            siz bilan bog'lanamiz. Telegram ochilmagan bo'lsa,{" "}
+            Telegram'da {TELEGRAM_PHONE_LABEL} chati ochildi. Ariza matni
+            nusxalandi — xabar maydoniga joylashtirib yuboring. Telegram
+            ochilmagan bo'lsa,{" "}
             <a href={sentLink} target="_blank" rel="noreferrer">
               shu yerni bosing
-            </a>{" "}
-            va xabarni yuboring.
+            </a>
+            .
           </p>
+        )}
+
+        {sentLink && !error && (
+          <pre className="application-text">{sentText}</pre>
         )}
       </div>
 

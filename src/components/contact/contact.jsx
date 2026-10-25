@@ -11,7 +11,7 @@ function Contact() {
 				<div className='contact-info'>
 					<div className='contact-item'>
 						<h4>Telegram:</h4>
-						<a href='https://t.me/umarxon7446' target='_blank' rel='noreferrer'>t.me/umarxon7446</a>
+						<a href='https://t.me/+998950227446' target='_blank' rel='noreferrer'>+998 95 022 74 46</a>
 					</div>
 
 					<div className='contact-item'>
