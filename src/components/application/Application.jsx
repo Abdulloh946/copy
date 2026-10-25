@@ -10,7 +10,7 @@ function Application(props) {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("+998");
   const [error, setError] = useState("");
-  const [sent, setSent] = useState(false);
+  const [sentLink, setSentLink] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -34,12 +34,10 @@ function Application(props) {
       "Ism: " + name.trim() + "\n" +
       "Telefon: +" + digits;
 
-    window.open(
-      "https://t.me/" + MANAGER + "?text=" + encodeURIComponent(text),
-      "_blank"
-    );
+    const link = "https://t.me/" + MANAGER + "?text=" + encodeURIComponent(text);
+    window.open(link, "_blank");
 
-    setSent(true);
+    setSentLink(link);
     setName("");
     setPhone("+998");
   }
@@ -93,9 +91,13 @@ function Application(props) {
 
         {error && <p className="application-error">{error}</p>}
 
-        {sent && !error && (
+        {sentLink && !error && (
           <p className="application-success">
-            Rahmat! Arizangiz Telegram orqali menejerga yuborish uchun tayyorlandi.
+            Rahmat! Arizangiz tayyor. Telegram ochilmagan bo'lsa,{" "}
+            <a href={sentLink} target="_blank" rel="noreferrer">
+              shu yerni bosing
+            </a>{" "}
+            va xabarni yuboring.
           </p>
         )}
       </div>

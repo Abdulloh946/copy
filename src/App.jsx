@@ -42,6 +42,7 @@ const App = () => {
     }, { threshold: 0.12 })
 
     sections.forEach((el) => {
+      if (el.getBoundingClientRect().top < window.innerHeight) return
       el.classList.add("reveal")
       observer.observe(el)
     })
@@ -94,6 +95,16 @@ const App = () => {
             Ariza topshirish
             <span>→</span>
           </a>
+
+          <p className="hero-note">
+            Ariza topshirish bepul — to'lov faqat suhbat va tasdiqdan keyin
+          </p>
+
+          <ul className="hero-facts">
+            <li><b>30+</b> tadbirkor a'zo</li>
+            <li><b>2</b> offline uchrashuv har oy</li>
+            <li><b>8</b> xil uchrashuv formati</li>
+          </ul>
         </div>
       </div>
       <main>
@@ -107,8 +118,8 @@ const App = () => {
       <Requirement/>
       <Meeting/>
       <Steps/>
-      <Pricing/>
       <Members/>
+      <Pricing/>
       <Faq/>
       <Application title="Keyingi a'zo siz bo'ling!"/>
       <Contact/>
