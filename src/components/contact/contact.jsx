@@ -16,12 +16,12 @@ function Contact() {
 
 					<div className='contact-item'>
 						<h4>Telefon:</h4>
-						<a href='tel:+998990339938'>+998 99 033 99 38</a>
+						<a href='tel:+998950227446'>+998 95 022 74 46</a>
 					</div>
 
 					<div className='contact-item'>
 						<h4>Email:</h4>
-						<a href='mailto:abdulgodir938@gmail.com'>abdulgodir938@gmail.com</a>
+						<a href='mailto:umarhonabdumutalimov@gmail.com'>umarhonabdumutalimov@gmail.com</a>
 					</div>
 				</div>
 			</div>

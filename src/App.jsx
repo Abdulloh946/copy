@@ -75,8 +75,8 @@ const App = () => {
             <a href="#faq" onClick={closeMenu}>Savollar</a>
           </nav>
 
-          <a href="tel:+998939435588" className="phone">
-            +998 93 943 55 88
+          <a href="tel:+998950227446" className="phone">
+            +998 95 022 74 46
           </a>
         </header>
 

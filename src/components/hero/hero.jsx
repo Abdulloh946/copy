@@ -18,7 +18,7 @@
 //         </div>
 
 //         <button className="phone">
-//           +998 99 033 99 38
+//           +998 95 022 74 46
 //         </button>
 //       </nav>
 
