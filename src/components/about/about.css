@@ -45,3 +45,24 @@
   border-radius: 30px;
   display: block;
 }
+
+@media (max-width: 900px) {
+  .about-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .about-text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .about-title {
+    font-size: 36px;
+    line-height: 46px;
+  }
+
+  .about-image img {
+    width: 100%;
+  }
+}

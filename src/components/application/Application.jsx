@@ -1,25 +1,69 @@
+import { useState } from "react";
 import "./application.css";
 
 import Finger from "../../assets/Group (11).png";
 import Rectangle from "../../assets/Rectangle (28).png";
 
-function Application() {
+const MANAGER = "umarxon7446";
+
+function Application(props) {
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("+998");
+  const [error, setError] = useState("");
+  const [sentLink, setSentLink] = useState("");
+
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    const digits = phone.replace(/\D/g, "");
+
+    if (name.trim().length < 2) {
+      setError("Ismingizni kiriting");
+      return;
+    }
+
+    if (digits.length !== 12 || !digits.startsWith("998")) {
+      setError("Telefon raqamini to'liq kiriting: +998 XX XXX XX XX");
+      return;
+    }
+
+    setError("");
+
+    const text =
+      "Assalomu alaykum! Asoschilar Club'ga ariza.\n" +
+      "Ism: " + name.trim() + "\n" +
+      "Telefon: +" + digits;
+
+    const link = "https://t.me/" + MANAGER + "?text=" + encodeURIComponent(text);
+    window.open(link, "_blank");
+
+    setSentLink(link);
+    setName("");
+    setPhone("+998");
+  }
+
   return (
-    <section className="application">
+    <section className="application" id={props.id}>
       <div className="application-content">
         <h2 className="application-title">
-          Qo'shiling va o'z biznesingizni
-          <br />
-          rivojlantiring!
+          {props.title || (
+            <>
+              Qo'shiling va o'z biznesingizni
+              <br />
+              rivojlantiring!
+            </>
+          )}
         </h2>
 
-        <div className="application-form">
+        <form className="application-form" onSubmit={handleSubmit}>
           <div className="application-input">
             <label>Ismingiz</label>
 
             <input
               type="text"
               placeholder="Ismingizni kiriting"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
             />
           </div>
 
@@ -27,13 +71,15 @@ function Application() {
             <label>Telefon raqamingiz</label>
 
             <input
-              type="text"
+              type="tel"
               placeholder="+998"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
             />
           </div>
 
-          <button className="application-btn">
-            <span>Ariza topshirish</span>
+          <button className="application-btn" type="submit">
+            <span>Telegram orqali yuborish</span>
 
             <img
               src={Finger}
@@ -41,7 +87,26 @@ function Application() {
               className="application-btn-icon"
             />
           </button>
-        </div>
+        </form>
+
+        <p className="application-hint">
+          Ariza Telegram'da{" "}
+          <b>@{MANAGER}</b> chatiga tayyor xabar bo'lib ochiladi — faqat
+          "Yuborish"ni bosasiz.
+        </p>
+
+        {error && <p className="application-error">{error}</p>}
+
+        {sentLink && !error && (
+          <p className="application-success">
+            Telegram'da @{MANAGER} chati ochildi — xabarni yuboring, tez orada
+            siz bilan bog'lanamiz. Telegram ochilmagan bo'lsa,{" "}
+            <a href={sentLink} target="_blank" rel="noreferrer">
+              shu yerni bosing
+            </a>{" "}
+            va xabarni yuboring.
+          </p>
+        )}
       </div>
 
       <img

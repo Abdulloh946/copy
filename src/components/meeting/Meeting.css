@@ -27,10 +27,21 @@
   gap: 18px;
 }
 
+.meeting-icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: #111;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
 .meeting-icon {
-  width: 42px;
-  height: 42px;
-  object-fit: contain;
+  width: 26px;
+  height: 26px;
 }
 
 .meeting-text h4 {
@@ -43,4 +54,10 @@
   color: #444;
   font-size: 15px;
   line-height: 24px;
+}
+
+@media (max-width: 768px) {
+  .meeting-cards {
+    grid-template-columns: 1fr;
+  }
 }

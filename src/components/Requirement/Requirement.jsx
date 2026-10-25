@@ -1,4 +1,4 @@
-import "./requirement.css";
+import "./Requirement.css";
 
 import User from "../../assets/Man in suit and tie.png";
 import Money from "../../assets/Price up.png";
@@ -22,7 +22,7 @@ function RequirementCard(props) {
 
 function Requirement() {
   return (
-    <section className="requirement">
+    <section className="requirement" id="requirements">
 
       <h2 className="requirement-title">
         Qo'shilish Shartlari va Talablar

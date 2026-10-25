@@ -40,3 +40,13 @@
   font-size: 22px;
   line-height: 30px;
 }
+
+@media (max-width: 768px) {
+  .statistics-cards {
+    flex-direction: column;
+  }
+
+  .statistics-number {
+    font-size: 48px;
+  }
+}

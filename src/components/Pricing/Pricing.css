@@ -49,8 +49,47 @@
   width: 210px;
   background: #222;
   border-radius: 16px;
-  padding: 18px;
+  padding: 24px 18px;
   text-align: center;
+  position: relative;
+  border: 1px solid transparent;
+  transition: transform .3s;
+}
+
+.pricing-card:hover {
+  transform: translateY(-4px);
+}
+
+.pricing-card.best {
+  background: #fff;
+}
+
+.pricing-card.best .pricing-card-title {
+  color: #111;
+}
+
+.pricing-card.best .pricing-card-price {
+  color: #444;
+}
+
+.pricing-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #111;
+  color: #fff;
+  border: 1px solid #444;
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.pricing-card-month {
+  color: #777;
+  font-size: 13px;
+  margin-top: 8px;
 }
 
 .pricing-card-title {
@@ -62,4 +101,93 @@
 .pricing-card-price {
   color: #a7a7a7;
   font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .pricing-title {
+    font-size: 28px;
+    padding: 0 16px;
+    margin-bottom: 40px;
+  }
+
+  .pricing-price {
+    font-size: 60px;
+  }
+}
+
+.pricing-included {
+  width: 90%;
+  max-width: 640px;
+  margin: 0 auto 60px;
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 20px;
+  padding: 28px 32px;
+}
+
+.pricing-included-title {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.pricing-included ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pricing-included li {
+  color: #cfcfcf;
+  font-size: 16px;
+  line-height: 24px;
+  padding-left: 30px;
+  position: relative;
+}
+
+.pricing-included li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  color: #111;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+  margin-top: 2px;
+}
+
+.pricing-note {
+  color: #9b9b9b;
+  text-align: center;
+  font-size: 15px;
+  margin: 40px auto 0;
+  width: 90%;
+}
+
+.pricing-cta {
+  display: table;
+  margin: 24px auto 0;
+  background: #fff;
+  color: #111;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 16px 34px;
+  border-radius: 50px;
+  transition: transform .3s;
+}
+
+.pricing-cta:hover {
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .pricing-included {
+    padding: 22px 20px;
+  }
 }

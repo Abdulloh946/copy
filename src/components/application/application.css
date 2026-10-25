@@ -87,3 +87,63 @@
   top: 50%;
   transform: translateY(-50%);
 }
+
+.application-error,
+.application-success {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+.application-error {
+  color: #ff6b6b;
+}
+
+.application-success {
+  color: #7ee08a;
+}
+
+@media (max-width: 768px) {
+  .application {
+    padding: 80px 0;
+  }
+
+  .application-title {
+    font-size: 28px;
+    line-height: 38px;
+  }
+
+  .application-form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .application-input,
+  .application-input input,
+  .application-btn {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .application-rectangle {
+    display: none;
+  }
+}
+
+.application-success a {
+  color: #fff;
+}
+
+.application-hint {
+  color: #8d8d8d;
+  text-align: center;
+  font-size: 13px;
+  line-height: 20px;
+  margin: 18px auto 0;
+  max-width: 520px;
+}
+
+.application-hint b {
+  color: #cfcfcf;
+  font-weight: 500;
+}
