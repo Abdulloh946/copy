@@ -49,8 +49,47 @@
   width: 210px;
   background: #222;
   border-radius: 16px;
-  padding: 18px;
+  padding: 24px 18px;
   text-align: center;
+  position: relative;
+  border: 1px solid transparent;
+  transition: transform .3s;
+}
+
+.pricing-card:hover {
+  transform: translateY(-4px);
+}
+
+.pricing-card.best {
+  background: #fff;
+}
+
+.pricing-card.best .pricing-card-title {
+  color: #111;
+}
+
+.pricing-card.best .pricing-card-price {
+  color: #444;
+}
+
+.pricing-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #111;
+  color: #fff;
+  border: 1px solid #444;
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.pricing-card-month {
+  color: #777;
+  font-size: 13px;
+  margin-top: 8px;
 }
 
 .pricing-card-title {

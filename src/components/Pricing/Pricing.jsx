@@ -2,7 +2,8 @@ import "./Pricing.css";
 
 function PricingCard(props) {
   return (
-    <div className="pricing-card">
+    <div className={props.best ? "pricing-card best" : "pricing-card"}>
+      {props.best && <span className="pricing-badge">Eng foydali</span>}
       <h3 className="pricing-card-title">
         {props.title}
       </h3>
@@ -10,6 +11,8 @@ function PricingCard(props) {
       <p className="pricing-card-price">
         {props.price}
       </p>
+
+      <p className="pricing-card-month">{props.month}</p>
     </div>
   );
 }
@@ -41,16 +44,20 @@ function Pricing() {
         <PricingCard
           title="3 oylik obuna"
           price="3.500.000 so'm"
+          month="≈ 1.167.000 so'm / oy"
         />
 
         <PricingCard
           title="6 oylik obuna"
           price="6.000.000 so'm"
+          month="1.000.000 so'm / oy"
         />
 
         <PricingCard
           title="12 oylik obuna"
           price="11.000.000 so'm"
+          month="≈ 917.000 so'm / oy"
+          best
         />
 
       </div>

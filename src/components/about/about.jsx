@@ -1,5 +1,5 @@
 import "./about.css";
-import AboutImg from "../../assets/IMG_7116 1 (2).png";
+import AboutImg from "../../assets/about.jpg";
 
 function About() {
   return (
@@ -25,7 +25,7 @@ function About() {
         </div>
 
         <div className="about-image">
-          <img src={AboutImg} alt="" />
+          <img src={AboutImg} alt="Asoschilar Club a'zolari" loading="lazy" />
         </div>
 
       </div>

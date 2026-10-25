@@ -1,4 +1,5 @@
 import './members.css'
+import CountUp from '../ui/CountUp'
 
 import Sherzod from '../../assets/IMG_8423.png'
 import Kamoliddin from '../../assets/image (91).png'
@@ -11,7 +12,7 @@ import Islom from '../../assets/IMG_6907.png'
 function MembersCard(props) {
 	return (
 		<div className='members-card'>
-			<img src={props.image} alt='' className='members-image' />
+			<img src={props.image} alt={props.name} className='members-image' loading='lazy' />
 
 			<h3 className='members-name'>{props.name}</h3>
 
@@ -69,7 +70,9 @@ function Members() {
 						job='SMM mutaxassisi'
 					/>
 					<div className='members-count'>
-						<h1>30+</h1>
+						<h1>
+								<CountUp value='30+' />
+							</h1>
 					</div>
 				</div>
 			</div>

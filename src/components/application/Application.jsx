@@ -48,9 +48,13 @@ function Application(props) {
     <section className="application" id={props.id}>
       <div className="application-content">
         <h2 className="application-title">
-          Qo'shiling va o'z biznesingizni
-          <br />
-          rivojlantiring!
+          {props.title || (
+            <>
+              Qo'shiling va o'z biznesingizni
+              <br />
+              rivojlantiring!
+            </>
+          )}
         </h2>
 
         <form className="application-form" onSubmit={handleSubmit}>

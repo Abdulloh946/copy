@@ -1,9 +1,12 @@
 import "./statistics.css";
+import CountUp from "../ui/CountUp";
 
 function StatisticsCard(props) {
   return (
     <div className="statistics-card">
-      <h2 className="statistics-number">{props.number}</h2>
+      <h2 className="statistics-number">
+        <CountUp value={props.number} />
+      </h2>
       <p className="statistics-text">{props.text}</p>
     </div>
   );

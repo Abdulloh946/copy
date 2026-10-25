@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Card from "./components/card/card"
 import Networking from "./components/networking/networking"
 import Application from './components/application/Application'
@@ -12,18 +12,48 @@ import Pricing from './components/Pricing/Pricing'
 import Steps from './components/steps/steps'
 import Members from './components/members/members'
 import Contact from './components/contact/contact'
+import Faq from './components/faq/Faq'
 import "./App.css";
 
 const App = () => {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
   const closeMenu = () => setMenuOpen(false)
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > window.innerHeight * 0.6)
+    onScroll()
+    window.addEventListener("scroll", onScroll, { passive: true })
+    return () => window.removeEventListener("scroll", onScroll)
+  }, [])
+
+  useEffect(() => {
+    const sections = document.querySelectorAll("main > section, main > h2, main > .cards")
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    if (reduce || !("IntersectionObserver" in window)) return
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible")
+          observer.unobserve(entry.target)
+        }
+      })
+    }, { threshold: 0.12 })
+
+    sections.forEach((el) => {
+      el.classList.add("reveal")
+      observer.observe(el)
+    })
+    return () => observer.disconnect()
+  }, [])
 
   return (
     <div>
       <div className="hero">
         <div className="overlay"></div>
 
-        <header className="navbar">
+        <header className={scrolled ? "navbar scrolled" : "navbar"}>
           <a href="#" className="logo">
             <span>ASOSCHILAR</span>
             <h2>CLUB</h2>
@@ -41,6 +71,7 @@ const App = () => {
             <a href="#about" onClick={closeMenu}>Biz kimmiz?</a>
             <a href="#requirements" onClick={closeMenu}>Qo'shilish Shartlari</a>
             <a href="#pricing" onClick={closeMenu}>Narxlar</a>
+            <a href="#faq" onClick={closeMenu}>Savollar</a>
           </nav>
 
           <a href="tel:+998939435588" className="phone">
@@ -65,6 +96,7 @@ const App = () => {
           </a>
         </div>
       </div>
+      <main>
       <Card/>
       <Networking/>
       <Application id="apply"/>
@@ -77,8 +109,14 @@ const App = () => {
       <Steps/>
       <Pricing/>
       <Members/>
-      <Application/>
+      <Faq/>
+      <Application title="Keyingi a'zo siz bo'ling!"/>
       <Contact/>
+      </main>
+
+      <a href="#apply" className={scrolled ? "mobile-cta show" : "mobile-cta"}>
+        Ariza topshirish →
+      </a>
 
       <footer className="footer">
         © {new Date().getFullYear()} Asoschilar Club. Barcha huquqlar himoyalangan.
