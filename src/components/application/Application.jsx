@@ -4,7 +4,7 @@ import "./application.css";
 import Finger from "../../assets/Group (11).png";
 import Rectangle from "../../assets/Rectangle (28).png";
 
-const MANAGER = "asoschilarmanager";
+const MANAGER = "umarxon7446";
 
 function Application(props) {
   const [name, setName] = useState("");
@@ -90,7 +90,7 @@ function Application(props) {
         </form>
 
         <p className="application-hint">
-          Ariza Telegram'da klub menejeri{" "}
+          Ariza Telegram'da{" "}
           <b>@{MANAGER}</b> chatiga tayyor xabar bo'lib ochiladi — faqat
           "Yuborish"ni bosasiz.
         </p>
@@ -99,8 +99,8 @@ function Application(props) {
 
         {sentLink && !error && (
           <p className="application-success">
-            Telegram'da @{MANAGER} chati ochildi — xabarni yuboring, menejer
-            siz bilan bog'lanadi. Telegram ochilmagan bo'lsa,{" "}
+            Telegram'da @{MANAGER} chati ochildi — xabarni yuboring, tez orada
+            siz bilan bog'lanamiz. Telegram ochilmagan bo'lsa,{" "}
             <a href={sentLink} target="_blank" rel="noreferrer">
               shu yerni bosing
             </a>{" "}
