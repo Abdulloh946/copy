@@ -147,3 +147,18 @@
   color: #cfcfcf;
   font-weight: 500;
 }
+
+.application-text {
+  max-width: 420px;
+  margin: 14px auto 0;
+  background: #1d1d1d;
+  border: 1px solid #2a2a2a;
+  border-radius: 14px;
+  padding: 14px 18px;
+  color: #e5e5e5;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 22px;
+  white-space: pre-wrap;
+  user-select: all;
+}
