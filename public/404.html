@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asoschilar Club</title>
+    <script>
+      // Broken or mistyped links (e.g. ".../copy/**") go to the home page
+      var first = location.pathname.split("/")[1];
+      location.replace(first ? "/" + first + "/" : "/");
+    </script>
+  </head>
+  <body style="background:#111;color:#fff;font-family:sans-serif;text-align:center;padding-top:40vh">
+    <a href="./" style="color:#fff">Asoschilar Club</a>
+  </body>
+</html>
