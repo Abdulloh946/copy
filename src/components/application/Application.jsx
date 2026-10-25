@@ -79,7 +79,7 @@ function Application(props) {
           </div>
 
           <button className="application-btn" type="submit">
-            <span>Ariza topshirish</span>
+            <span>Telegram orqali yuborish</span>
 
             <img
               src={Finger}
@@ -89,11 +89,18 @@ function Application(props) {
           </button>
         </form>
 
+        <p className="application-hint">
+          Ariza Telegram'da klub menejeri{" "}
+          <b>@{MANAGER}</b> chatiga tayyor xabar bo'lib ochiladi — faqat
+          "Yuborish"ni bosasiz.
+        </p>
+
         {error && <p className="application-error">{error}</p>}
 
         {sentLink && !error && (
           <p className="application-success">
-            Rahmat! Arizangiz tayyor. Telegram ochilmagan bo'lsa,{" "}
+            Telegram'da @{MANAGER} chati ochildi — xabarni yuboring, menejer
+            siz bilan bog'lanadi. Telegram ochilmagan bo'lsa,{" "}
             <a href={sentLink} target="_blank" rel="noreferrer">
               shu yerni bosing
             </a>{" "}
